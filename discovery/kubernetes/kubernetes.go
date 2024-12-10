@@ -903,14 +903,14 @@ func addObjectMetaLabels(labelSet model.LabelSet, objectMeta metav1.ObjectMeta, 
 	for k, v := range objectMeta.Labels {
 		ln := strutil.SanitizeLabelName(k)
 		labelSet[model.LabelName(metaLabelPrefix+string(role)+"_label_"+ln)] = lv(v)
-		labelSet[model.LabelName(metaLabelPrefix+string(role)+"_labelpresent_"+ln)] = presentValue
+		//labelSet[model.LabelName(metaLabelPrefix+string(role)+"_labelpresent_"+ln)] = presentValue
 	}
 
-	for k, v := range objectMeta.Annotations {
-		ln := strutil.SanitizeLabelName(k)
-		labelSet[model.LabelName(metaLabelPrefix+string(role)+"_annotation_"+ln)] = lv(v)
-		labelSet[model.LabelName(metaLabelPrefix+string(role)+"_annotationpresent_"+ln)] = presentValue
-	}
+	//for k, v := range objectMeta.Annotations {
+	//	ln := strutil.SanitizeLabelName(k)
+	//	labelSet[model.LabelName(metaLabelPrefix+string(role)+"_annotation_"+ln)] = lv(v)
+	//	labelSet[model.LabelName(metaLabelPrefix+string(role)+"_annotationpresent_"+ln)] = presentValue
+	//}
 }
 
 func namespacedName(namespace, name string) string {
