@@ -305,7 +305,7 @@ func (e *Endpoints) buildEndpoints(eps *apiv1.Endpoints) *targetgroup.Group {
 	}
 	e.addServiceLabels(eps.Namespace, eps.Name, tg)
 	// Add endpoints labels metadata.
-	addObjectMetaLabels(tg.Labels, eps.ObjectMeta, RoleEndpoint)
+	//addObjectMetaLabels(tg.Labels, eps.ObjectMeta, RoleEndpoint)
 
 	type podEntry struct {
 		pod          *apiv1.Pod
